@@ -2,6 +2,7 @@ package com.ouakliyassine.gestiondesstocks.entites;
 
 import java.sql.Date;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -20,13 +21,13 @@ public class Utilisateur {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
-        private Long userId;
-        private String cin;
-        private String firstName;
-        private String lastName;
-        private Date dateN;
-        private Integer tel;
-        private String address;
+    private Long userId;
+    private String cin;
+    private String firstName;
+    private String lastName;
+    private Date dateN;
+    private Integer tel;
+    private String address;
 
 
 }

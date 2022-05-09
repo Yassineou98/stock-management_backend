@@ -29,7 +29,6 @@ public class Article {
 
     @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH})
     @JoinColumn(name = "categorie_id")
-    @JsonIgnore
     private Categorie categorie;
 
 

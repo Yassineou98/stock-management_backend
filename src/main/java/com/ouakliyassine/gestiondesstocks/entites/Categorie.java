@@ -26,6 +26,7 @@ public class Categorie {
 
 
     @OneToMany(mappedBy = "categorie", fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH})
+    @JsonIgnore
     private Set<Article> articles = new HashSet<>();
 
 
