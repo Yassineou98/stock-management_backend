@@ -10,30 +10,27 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.Email;
-import java.sql.Date;
 
 @Entity
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Utilisateur {
-
+public class Admin {
     private static final long serialVersionUID = 1L;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
-    private Long userId;
+    private Long id;
     private String username;
     private String password;
     @Email
     private String email;
-    private String cin;
-    private String firstName;
-    private String lastName;
-    private Date dateN;
-    private Integer tel;
-    private String address;
 
-
+    public Admin(String username, String password, String email) {
+        this.username = username;
+        this.email = email;
+        this.password = password;
+    }
 }
